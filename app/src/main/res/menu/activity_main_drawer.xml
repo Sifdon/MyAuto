@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="Functionalities">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/location"
+                    android:icon="@mipmap/ic_location_on_black_24dp"
+                    android:title="Where is your car?" />
+                <item
+                    android:id="@+id/info_manteniment"
+                    android:icon="@mipmap/ic_build_black_24dp"
+                    android:title="Maintenance information" />
+            </group>
+        </menu>
+
+    </item>
+
+    <item android:title="Manage your car data">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/addauto"
+                    android:icon="@mipmap/ic_note_add_black_24dp"
+                    android:title="Add Auto" />
+                <item
+                    android:id="@+id/preferences"
+                    android:icon="@mipmap/ic_settings_black_24dp"
+                    android:title="Modify preferences" />
+
+                <item
+                    android:id="@+id/help"
+                    android:icon="@mipmap/ic_help_outline_black_24dp"
+                    android:title="Help and Contact" />
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@mipmap/logout"
+                    android:title="LogOut" />
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

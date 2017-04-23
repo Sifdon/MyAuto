@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">MyAuto3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="brands">
+        <item>Audi </item>
+        <item>Seat </item>
+        <item>Mercedes </item>
+        <item>Opel </item>
+        <item>Renault </item>
+        <item>ALFA ROMEO </item>
+        <item>ASTON MARTIN </item>
+        <item>BMW </item>
+        <item>CITROEN </item>
+        <item>CHEVROLET </item>
+        <item>DACIA </item>
+        <item>FIAT </item>
+        <item>FORD </item>
+        <item>HONDA </item>
+        <item>HYUNDAI </item>
+        <item>JEEP </item>
+        <item>KIA </item>
+        <item>LAND ROVER </item>
+        <item>MAZDA </item>
+        <item>NISSAN </item>
+        <item>PEUGEOT </item>
+        <item>TOYOTA </item>
+        <item>VOLVO </item>
+    </string-array>
+
+    <string-array name="motors">
+        <item>1.0 </item>
+        <item>1.2 </item>
+        <item>1.4 </item>
+        <item>1.6 </item>
+        <item>1.9 </item>
+        <item>2.0 </item>
+        <item>2.2 </item>
+    </string-array>
+
+    <string-array name="years">
+        <item>1 </item>
+        <item>2 </item>
+        <item>3 </item>
+        <item>4 </item>
+        <item>5 </item>
+        <item>6 </item>
+        <item>7 </item>
+        <item>8 </item>
+        <item>9 </item>
+        <item>10 </item>
+        <item>11</item>
+        <item>12 </item>
+        <item>13 </item>
+        <item>14 </item>
+        <item>15 </item>
+        <item>16 </item>
+        <item>17 </item>
+        <item>18 </item>
+        <item>19 </item>
+        <item>20 </item>
+
+    </string-array>
+
+
+</resources>

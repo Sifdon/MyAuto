@@ -1,0 +1,45 @@
+{
+  "project_info": {
+    "project_number": "1054758904152",
+    "firebase_url": "https://myauto3-e567d.firebaseio.com",
+    "project_id": "myauto3-e567d",
+    "storage_bucket": "myauto3-e567d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054758904152:android:55c9fa4b66e522ab",
+        "android_client_info": {
+          "package_name": "domain.crack.sergigrau.myauto3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054758904152-unnungdk2473c85h5kj3nui4f0qrepmu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtXIV_cbrSWxHN65338H46TCVlcHKBdr0"
+        },
+        {
+          "current_key": "AIzaSyBc-H3w72rHDe6em5Z1kvyYvCE7iWwn694"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

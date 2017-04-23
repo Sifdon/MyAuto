@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="LogIn:"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/user_login"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the User"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/pass_login"
+            android:inputType="numberPassword"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the Password"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/login"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="If you don't have account yet, Please register here:"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/user_register"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the User"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/pass_register"
+            android:inputType="numberPassword"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the Password"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/register"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/8b201f16f3e9ea15a95a78bfa5721d64371818fa/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_24c32eef4da0a8f852de90034db6e7631f537f9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/1a1f941ed2d37d4073c33a26d767aef5a5fd57e5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d67042688d34474a82fe4ef4c6514ef471377ef">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_0288227bf924a071819ceecddcbd32f1c66253f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/4771bd159c9873c5ea35f95152da3bfc73992d00/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_a416cb720ac6f6681ceb1f5b2aff09a12e0bd55f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/9092780db072d74e4f7b5c1fb0de10b9d65b8b44/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6f233cb35a6ea92364130d2d48791c461ec65983">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_67a2dbb481ba9e0ff97e5df13028d8890c08c7df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/2a20ab6090c955c30faeba07f530c9ac964095a5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d0a843615f3b5fa3a080497709f5436696149a09">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_4fb1f21eeb27cd846e2c6806ae6ef1bf0657bbea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/560ea7b49717db3449d18d8d050131b7d8df41e6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4e684205744f814a73b7752545e0661330415c9e">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_3f583a0f2a551e33193dc393bd4ffe5ea64445d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/b76dd6649121db3df5a9513a58b3f1f8f099e9a2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d81a3b0a16f48b4456f442552b62f4b1a472ce24">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_f556d41f35d103f84482a3e8527f50c68162545f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/bc586c2375be548bcfb12111f471cc4eca52ff65/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b136ac09f209c1d91fec7db8518e33d4373c8f39">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_34eb70f71972bc5ba56880d36c7fd5aec834d208.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/e13b8072c0d2dcea81f170c4cea738dc1e2c13f0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_95e47e18fafdb979602b06c1b6a328d6457467ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/116871ba11cb71810aed74107a534e772ae64c20/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="825c2e97a00df4df5b0f3081faa4fd6280cd7c72">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_7dd570530e059c57b18cdfa1b77a6fdf46220fe0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/90e8f475fd54d947d0dbc18818c8eaeb5cc352b1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_9b2bf4b424cf53dc680733ec45ba08b0075e40e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/c925de0f780b9e1bc93beab518f9a1b73564165b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb115a110992b254f767f337da233071f6f940b8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_cd0fd5991f988228307cdcede3a76ea0ac6e3bc3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_e78c8013130a6d59f7824dcfba2f720c65feb659.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/3ecdbdf3829e356c3f5eb8a29237d1d1295419f9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_92c4c2f461744c6096bec9afd61e78a99989d812.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/d3ffe48e82ee9f57cdf1f5f4fa2cd793eac666ea/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_071c4942241430cc7491b8a79516bf36f1fbfff7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/1e9964ab33f961aa237f075cfc3164f54087d071/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_bfe22c8d3d77b60a5ace22aa0de7f51baa45a047.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/442932461f0c270f6835ddaecba5b15241749d15/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="125bce1fb2d481b964fabf75f0949957ebe9ecd1">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_46d16065592716519d6d2fea51ba09e90e2913f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/dcd85516faa85ae3111bf30ea9bd9e1a26f8a63e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_18e6745eddf9d0eaa8aaf81faa9a40ceb030ab24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/4199304e823fe6149406c49d2eb5c357afe4ac5b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_37732df343918a74cccf72032692ee7019b27d82.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/d53c6c8258dc8c08a25045a37d5d79d2cb82e551/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b2349ddfe04831042844cbf055e5a072da37ddf8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_d2981dd20c5047a81a3df93df21719ba6e2329cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/fba9a90292d16a552ab3284ec1f521eb9dd6b5f6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_5edb532123d0e662a160c8956030f2c2331b2add.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/069936901268e86d90d8b55835243f6c5adbff5e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_46c9f94934b1a44885a082ecf55fe6ad0b33c5e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/75aa453dfe36b495596ec5a67280d54ed23f0698/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5ee29abfc804ebd51d65a4bde424c0ee74363939">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_87035dd65ee961e39772e88e022583f59e877125.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/16bbc741aa93e024119f2e7238cdedcd21e016c5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cce5792fa30ee8520620f298bf920309423b180f">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_c6d4b6c141b695d8665d61e6b615511aee26063e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/5523f7dbc06eeb6677afe6ec02439d5a0cc47ee6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_7f1312feb60cbe03a56b139332d8535323009499.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/5219f42a2edafbbfaddfd557949e3bb2934b07fc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="888983f51cf34f57a93ff16832552f2f15937212">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_264a4758f4382e7ec78b70378620c3446094b750.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/56088aec7ddfb2489aeaaba9bcf5a79b4df859ea/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_1b9d1e5a00090987a30067104ad7818b38eda13c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/085716381cc8d539f6b9dd7bacc907c38c53b330/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d395c5142f474891c7750f13b6a85d14682f166b">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_a3ad95d46a59857031e53bf59e1d046e32c1764a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/764e9281a87a57583acbce791e763e5ba4a874f1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6818f5804ca0b5eb089d902458faea4179eca1d">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_5302425cad299ac23236bcf1e1dc2f21206b738c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/b7db58f283636d43154b0fe8d13d5259ea73b937/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb004ea36f8802bad30000e286c177691740a322">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_ac745e20c7291e2a0ffb0a56a14570ff5f166f0c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/bbcd31e4219106fbd298b1ed286562b0b7a843d8/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_b85c8661d374326e17bafb6511cae7ceea3544fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/f891bc015bb09836d136226f873625b96355ed71/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_1d72b71038ee9572752313755ef26f2e0f29aebe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/f855809b637d750098c943a298821edfa4733e3e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_36fe8e0ccff7535dc9eb7a359d0c9647e65859f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/8cab7eaba2637566126ff0e9b5ade900fbcd1bc6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6c74dab42788b458960618238f338d324b6f0656">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_fb15452abe1307f4cf1d4f795bb5b378588ee57c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/d811b8e7a1176d41bc72e90b80231c4afc79528c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_170373718ffaeabaf69f640b93304319a303beca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/7eee13aeca1505ce7f7128809c790c0523e469d0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_db6768c3dc64131c9a4182859b8dec739f42c227.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/247764bb11dadc368c19c871227febf074aa86f0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_2c553f5be83b08e3fd57b40dfead61cf4226b456.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/4edcc715b4c214a4ccbad06efb3f290f1d85c61b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ab8343c3aadefce37313ceadd8bc4db1993f2ff0">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_3961d4a6adcd2bfab7718816f23ab727d7cf9edb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/9e6bfc0ed51e69aadb340661dad06532c509e3c6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3826817a4de1daa170c33bbc04db24ab6826bd5">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_b13a09c73c439e9378a8b1b65f6ef99132ff76ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/1368ce9875432f88df5227678564831dd7821cc6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a7ffe939ffd830b5d4052f3c1c4c235923790ce">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_32d046e97430303904e4f5e9ee1b4c1820c8e90c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/07e01c37676279cf7a93d997c01f7be584ed9947/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_b61f894c72c1ba64ca5b375125317d5749bb0152.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/ab86fca9966ffc3a31e92051b752bb92705cbdc6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7ba26433d9e9f4429d83ff65ad79bfc801dc00a">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_2e460289a5424cbd05d6c1b55467a60b0a951773.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/2b32565120968c51cf7be3a176bdd04a4f5691d5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_be91046666d42cef69dd71ef27e089d5875939fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/56088aec7ddfb2489aeaaba9bcf5a79b4df859ea/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_e94358cd9214999cf11d4a6464323f96d08e2b27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/1c8cdd0562b41bce58c3236e1344a1c581479418/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="12032271e6be735e811ad529cb08ff066c381640">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_9f7a1ffd7b2f44690d7f2747b632a9136bb3dce7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/2d1df6d611961555877d8ac3bed8270963273e6e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8dfe54fbaf4f2a27d395ddf806d0c011170999e0">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_8384e99c67928347e0fedded046eb7225573fc60.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/bbda893a2b5c355ac05b739c7a8e7932a2a209dc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0bb2f0934fa55799508ba58ffc9ba579b35744b8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_e1f0a06b737cbd84efbbeb7730c38774ebcc456e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/45a8a1d4b59bd745a4ed26fbf23cfff47d870c27/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_6785eb68ba63a1099b4fd380ed755c928fc43a57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/82acc6168d78db98c3e4f2bf02e75802cc65e12a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_d7bd4389e7786bcf1cdb09791724c8aed9538e76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/191e84015726a93123dffd48800c1d069c034a98/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c3c7f923e1df76640acb3a24823600f034a5d226">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_b667dd5b62061089192b10173c9761db93694704.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/c0df9645da1dc2b9394f13e0fe68711c6d970e07/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_2b1e3a11f8b48f5b448980d3b4e207476d1b3daf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/f6d2ad391cbe2ce4ca6984a0d84f0e05105177d2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e4851331b3944beb6e7f77316a7661f53781da62">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_6849b118730365ee01f58193bde5a62d6717a0dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/c9f28693cbd1eb6f3cf0b51b4672db1938c50d08/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_5741d69cd43683ab37504c19938aa625d486bc13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/e38c4d1bd845954695d4856955c38779e81cd84d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_9c6c38c953220d6b5e83d911f4f0b7c9d992d347.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/83b45f5d47a5df8cbe5c9f827de427c21b33a5a7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1f9df8b2bfff203397548ee400789154968adfe8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_fd9826be85ae1dc2fc8123899e8f2be0011bdf33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/5314b9c09235fa559ff6552b5d575e501bc28e0a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_f4301f55be6a8b40dce67e04170cd1117d742280.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/a859db0ebd29a7cc6336531b850e26ffa1b4f84f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="536fd6afd6e1280607c5d70306eb32d385db7964">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_cd249faf5ddccb0299217b04e291ce2a38d6444c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/046534e5b985a4eb0284c83b1633f2f65522d86b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b32372f6821e003ae24cd3389bdd7925247f100">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_9fa68dffe58334aba81f1ead536be636f677e176.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/19aee461ffa2b2fbf94c92df4ece5726648edf5c/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_aa9f5bdc8cab1c40d2997941a6feab91b00dd283.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/9d1de7c1b0b09fc2fff0a55ac71fc5ba6e51e18b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efae381df589f3d4977c346c8a980f030315bb8b">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_4fe3c26f3356c20098af0ef317215d1bb12eb335.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/4eaa5852e6e231a337ed05eb3e257e388b0ddd03/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b42a61cd5924f28e95894e859e6abe57847e2f3">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_5e624c48a7359f81c9791f53426a3c24c28e9977.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/dfa946212bbaa795f03584adfdeb6f8bcc4f08d5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec7d3099b4e3cf23230c78acaae438f3371e1c19">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_38204e1b7a3cf8e0dde06c64958f8409aa4b1a12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/b72743d0413f8e79aefc934fdfbb02ff2477509b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_1d33c2115695acb4194df458992b6815c65d110a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mbpro/.android/build-cache/6f7167e0b8a991d0a3a1c86030a1212bb49109ae/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_99a37859cf9b8bc5e31d0985fa632632f9a72b21.jar" />
+    </item>
+
+</items>
