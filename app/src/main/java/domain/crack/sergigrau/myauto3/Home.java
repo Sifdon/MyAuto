@@ -134,6 +134,8 @@ public class Home extends AppCompatActivity
                     FirebaseAuth.getInstance().signOut();
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
+                }else if(id == R.id.log){
+                    fragmentManager.beginTransaction().replace(R.id.container, new History_Fragment()).commit();
                 }
 
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -336,7 +338,7 @@ public class Home extends AppCompatActivity
                                                 String motor = dataSnapshot.getValue(String.class);
                                                 String result = brand + " " + model + " " + motor;
                                                 textView_header.setText(result);
-                                                imageView_header.setImageResource(R.mipmap.car);
+                                                imageView_header.setImageResource(R.drawable.coche);
 
 
                                             }
@@ -361,7 +363,7 @@ public class Home extends AppCompatActivity
                             }
                         });
                     }else{
-                        imageView_header.setImageResource(R.mipmap.ic_code_black_24dp);
+                        imageView_header.setImageResource(R.drawable.empty);
                         textView_header.setText("Not Car Introduced");
                     }
                 }

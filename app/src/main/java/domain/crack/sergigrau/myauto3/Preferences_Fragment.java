@@ -50,9 +50,9 @@ public class Preferences_Fragment extends Fragment {
 
         final EditText editText_km = (EditText) getView().findViewById(R.id.kilometers_edit);
 
-        ImageView cancel = (ImageView) getView().findViewById(R.id.cancel);
+        Button cancel = (Button) getView().findViewById(R.id.cancel);
 
-        ImageView save = (ImageView) getView().findViewById(R.id.save);
+        Button save = (Button) getView().findViewById(R.id.save);
 
         Button remove = (Button) getView().findViewById(R.id.remove);
 
@@ -65,6 +65,7 @@ public class Preferences_Fragment extends Fragment {
         final DatabaseReference ref_motor = db.getReference("Motor");
         final DatabaseReference ref_antiguity = db.getReference("Antiguity");
         final DatabaseReference ref_olicontador = db.getReference("Oli Contador");
+        final DatabaseReference ref_history = db.getReference("Log/History/message");
 
 
         ref_kilometers.addValueEventListener(new ValueEventListener() {
@@ -148,6 +149,7 @@ public class Preferences_Fragment extends Fragment {
                             ref_antiguity.setValue("");
                             ref_kilometers.setValue("");
                             ref_olicontador.setValue(0);
+                            ref_history.setValue("");
 
                         }
                     }

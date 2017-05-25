@@ -28,6 +28,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
     testCompile 'junit:junit:4.12'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 
     // Google Play Services Library (in particular "play-services-auth")
     compile "com.google.android.gms:play-services:10.2.1"

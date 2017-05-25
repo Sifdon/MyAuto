@@ -27,7 +27,7 @@ public class Help_Fragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ImageView button = (ImageView) getActivity().findViewById(R.id.back_help);
+        Button button = (Button) getActivity().findViewById(R.id.back_help);
 
         button.setOnClickListener(new View.OnClickListener() {
 

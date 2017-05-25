@@ -15,6 +15,11 @@
                     android:id="@+id/info_manteniment"
                     android:icon="@mipmap/ic_build_black_24dp"
                     android:title="Maintenance information" />
+                <item
+                    android:id="@+id/log"
+                    android:icon="@mipmap/historial"
+                    android:title="History" />
+
             </group>
         </menu>
 

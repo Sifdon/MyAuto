@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3f98b5</color>
     <color name="colorPrimaryDark">#020202</color>
     <color name="colorAccent">#ff0004</color>
-</resources>
+    <color name="colorGreen">#4cff00</color>
+    <color name="fragment_bg">#e5e5e5</color>
+
+
+
+    </resources>

@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -34,7 +35,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddAuto_Fragment extends Fragment{
 
-    private ImageView cancel, save;
+    private Button cancel, save;
 
     private EditText model_edit, kilometers_edit;
 
@@ -64,9 +65,9 @@ public class AddAuto_Fragment extends Fragment{
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        cancel = (ImageView) getView().findViewById(R.id.cancel);
+        cancel = (Button) getView().findViewById(R.id.cancel);
 
-        save = (ImageView)getView().findViewById(R.id.save);
+        save = (Button)getView().findViewById(R.id.save);
 
         brands_spinner = (Spinner) getView().findViewById(R.id.brand);
 

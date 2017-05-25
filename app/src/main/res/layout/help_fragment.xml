@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_2">
 
 
 
@@ -26,13 +29,20 @@
             android:textColor="@color/colorPrimaryDark"
             android:text="In case of any doubt you can contact us by email: sergiandmarc@domain.crack.org" />
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
+        <Button
+            android:layout_width="wrap_content"
             android:id="@+id/back_help"
-            android:src="@mipmap/ic_backspace_black_24dp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:drawableLeft="@mipmap/ic_backspace_black_24dp"
+            android:drawablePadding="8dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2aa8da"
+            android:text="Back"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
 
     </LinearLayout>
 

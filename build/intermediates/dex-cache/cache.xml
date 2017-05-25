@@ -29,6 +29,15 @@
         <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_a416cb720ac6f6681ceb1f5b2aff09a12e0bd55f.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/mbpro/.android/build-cache/54a2b5859590be13629035e9790c059e7bb49100/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_03d14baa33e02a4ffddd7c57e5d7bdeef67cd78f/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/mbpro/.android/build-cache/9092780db072d74e4f7b5c1fb0de10b9d65b8b44/output/jars/classes.jar"
         jumboMode="false"
@@ -128,6 +137,15 @@
         <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_92c4c2f461744c6096bec9afd61e78a99989d812.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5383568998a7a531568eb9116e9e05a2c7179410/classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="/Users/mbpro/.android/build-cache/d3ffe48e82ee9f57cdf1f5f4fa2cd793eac666ea/output/jars/classes.jar"
         jumboMode="false"
@@ -198,6 +216,15 @@
         revision="25.0.2"
         sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
         <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/pre-dexed/debug/classes_46c9f94934b1a44885a082ecf55fe6ad0b33c5e5.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb3f6dda8c9f45e2412babe1ed4c1c854797e9f8">
+        <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f5f6c588c90c4e47cb4858ff01aa966b4ffc3196/classes.dex" />
     </item>
     <item
         is-multidex="false"
