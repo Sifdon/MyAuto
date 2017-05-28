@@ -1,21 +1,14 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Location_Package;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +16,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import domain.crack.sergigrau.myauto3.R;
 
 /**
  * Created by sergigrau on 18/03/17.
@@ -33,7 +28,6 @@ public class Location_Fragment extends Fragment implements OnMapReadyCallback {
 
     double Latitud, Longitud;
 
-    private final GoogleMap map =  null;
 
     private MapView mapView;
 

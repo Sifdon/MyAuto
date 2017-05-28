@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <!-- PREFERENCIAS GENERALES -->
+        <PreferenceCategory
+            android:key="pref_gen"
+            android:title="@string/pref_gen"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <CheckBoxPreference
+                android:key="notificaciones"
+                android:id="@+id/noti"
+                android:title="Receive Notifications"
+                android:defaultValue="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <ListPreference
+                android:key="idioma"
+                android:title="Select Language"
+                android:defaultValue="2"
+                android:entries="@array/pref_numArticulos_entradas"
+                android:entryValues="@array/pref_numArticulos_valores"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:key="pref_usuario"
+            android:title="User Account Preferences"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <EditTextPreference
+                android:id="@+id/nameuser"
+                android:key="user"
+                android:title="Your Name"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_red"
+        android:title="Network Preferences"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <CheckBoxPreference
+            android:key="network"
+            android:id="@+id/network"
+            android:title="Activate network connection"
+            android:defaultValue="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    </PreferenceCategory>
+
+
+
+    </PreferenceScreen>

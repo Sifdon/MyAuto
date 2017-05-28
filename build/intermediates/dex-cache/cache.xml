@@ -223,7 +223,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bb3f6dda8c9f45e2412babe1ed4c1c854797e9f8">
+        sha1="affe9d9513926c37e8d0f16038848fa6f6622d67">
         <dex dex="/Users/mbpro/Documents/Android Projects/MyAuto3/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f5f6c588c90c4e47cb4858ff01aa966b4ffc3196/classes.dex" />
     </item>
     <item

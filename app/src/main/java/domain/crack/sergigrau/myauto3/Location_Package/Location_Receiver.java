@@ -1,31 +1,17 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Location_Package;
 
-import android.app.IntentService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 
-
-import android.util.Log;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.location.ActivityRecognitionResult;
-import com.google.android.gms.location.DetectedActivity;
 import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-
-import java.util.List;
-import java.util.Vector;
 
 /**
  * Created by sergigrau on 17/03/17.
@@ -35,9 +21,8 @@ public class Location_Receiver extends BroadcastReceiver {
 
     private double Longitud_anterior, Latitud_anterior, Longitud_actual, Latitud_actual;
 
-    private String s;
 
-    private int distance,oli_contador,kilometers,meters;
+    private int distance;
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
@@ -93,7 +78,7 @@ public class Location_Receiver extends BroadcastReceiver {
                                         ref_olicontador.addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                int tmp = Integer.parseInt(dataSnapshot.getValue(String.class));
+                                                int tmp = dataSnapshot.getValue(Integer.class);
                                                 tmp = tmp + distance;
                                                 ref_olicontador.setValue(tmp);
                                             }

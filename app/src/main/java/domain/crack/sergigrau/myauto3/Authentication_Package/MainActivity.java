@@ -1,4 +1,4 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Authentication_Package;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +18,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import domain.crack.sergigrau.myauto3.Domain_Package.Home;
+import domain.crack.sergigrau.myauto3.R;
 
 /**
  * Created by SergiGrau on 20/4/17.
@@ -102,17 +105,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void register(){
-
         final EditText user_reg = (EditText) findViewById(R.id.user_register);
         final EditText pass_reg = (EditText) findViewById(R.id.pass_register);
-
         mAuth.createUserWithEmailAndPassword(user_reg.getText().toString(), pass_reg.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d("AUTH", "createUserWithEmail:onComplete" + task.isSuccessful());
-
                         if (!task.isSuccessful()) {
                             Log.d("FIREBASE AUTH", "onComplete: Failed-" + task.getException().getMessage());
                             Toast.makeText(getApplicationContext(), "REGISTER FAILED", Toast.LENGTH_SHORT).show();
@@ -123,16 +123,13 @@ public class MainActivity extends AppCompatActivity {
                             DatabaseReference ref = db.getReference("tokendevices");
                             ref.push().setValue(tok);
                         }
-
                     }
                 });
     }
 
     public void login(){
-
         final EditText user_log = (EditText) findViewById(R.id.user_login);
         final EditText pass_log = (EditText) findViewById(R.id.pass_login);
-
         mAuth.signInWithEmailAndPassword(user_log.getText().toString(), pass_log.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -149,9 +146,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-
-
-
 }
 
 

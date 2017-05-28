@@ -1,12 +1,8 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Domain_Package;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.ShareCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import domain.crack.sergigrau.myauto3.R;
+
 /**
  * Created by sergigrau on 15/03/17.
  */
@@ -27,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class InfoManteniment_Fragment extends Fragment {
 
 
-    String kmetres, kmetresrestants;
+    String  kmetresrestants;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {

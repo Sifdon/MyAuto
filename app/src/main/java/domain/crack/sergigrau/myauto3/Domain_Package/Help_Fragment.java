@@ -1,4 +1,4 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Domain_Package;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,7 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
+
+import domain.crack.sergigrau.myauto3.R;
 
 /**
  * Created by sergigrau on 17/03/17.

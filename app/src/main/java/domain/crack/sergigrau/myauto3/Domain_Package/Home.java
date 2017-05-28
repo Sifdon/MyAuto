@@ -1,8 +1,10 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Domain_Package;
 
 import android.Manifest;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
@@ -33,6 +35,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import domain.crack.sergigrau.myauto3.Authentication_Package.MainActivity;
+import domain.crack.sergigrau.myauto3.Location_Package.Location_Fragment;
+import domain.crack.sergigrau.myauto3.Location_Package.Location_Receiver;
+import domain.crack.sergigrau.myauto3.Monitoring_Package.ActivityRecognizedService;
+import domain.crack.sergigrau.myauto3.Preferences_Package.Preferences;
+import domain.crack.sergigrau.myauto3.R;
 
 import static com.google.android.gms.location.LocationServices.FusedLocationApi;
 
@@ -69,10 +78,14 @@ public class Home extends AppCompatActivity
 
     private static final int REQUEST_LOCATION = 2;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().add(R.id.container,new description_fragment()).commit();
@@ -92,6 +105,8 @@ public class Home extends AppCompatActivity
                 final FragmentManager fragmentManager = getSupportFragmentManager();
 
                 FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+
                 DatabaseReference ref_coche = db.getReference("Coche_id");
 
 
@@ -122,8 +137,7 @@ public class Home extends AppCompatActivity
                     });
 
                 } else if (id == R.id.preferences) {
-                    fragmentManager.beginTransaction().replace(R.id.container,new Preferences_Fragment()).commit();
-
+                    startActivity(new Intent(getApplication(), Preferences.class));
                 } else if(id == R.id.help){
                     fragmentManager.beginTransaction().replace(R.id.container, new Help_Fragment()).commit();
                 } else if (id == R.id.location){
@@ -311,11 +325,13 @@ public class Home extends AppCompatActivity
 
         DatabaseReference ref_cocheid = db.getReference("Coche_id");
 
+        SharedPreferences preferencias = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         final ImageView imageView_header = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.imageView);
         final TextView textView_header = (TextView) navigationView.getHeaderView(0).findViewById(R.id.textView);
-
+        TextView welcome = (TextView)navigationView.getHeaderView(0).findViewById(R.id.welcome);
+        welcome.setText("Welcome " + preferencias.getString("name",""));
 
 
             ref_cocheid.addValueEventListener(new ValueEventListener() {

@@ -1,4 +1,4 @@
-package domain.crack.sergigrau.myauto3;
+package domain.crack.sergigrau.myauto3.Notifications_Package;
 
 import android.util.Log;
 

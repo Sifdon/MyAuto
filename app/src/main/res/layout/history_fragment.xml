@@ -7,49 +7,50 @@
     android:background="@drawable/fondo_2">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ScrollView android:layout_height="wrap_content" android:layout_width="wrap_content">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:id="@+id/info_historial"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginRight="2dp"
-                        android:textSize="9dp"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:text=" "/>
-                <Button
+
+                <TextView
+                    android:id="@+id/info_historial"
                     android:layout_width="wrap_content"
-                    android:id="@+id/back_history"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="10dp"
+                    android:text=" "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="9dp" />
+
+                <Button
+                    android:id="@+id/back_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
                     android:layout_gravity="right"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#2aa8da"
                     android:drawableLeft="@mipmap/ic_backspace_black_24dp"
                     android:drawablePadding="8dp"
-                    android:textColor="@android:color/white"
-                    android:backgroundTint="#2aa8da"
                     android:text="Back"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
-                    />
-
+                    android:textColor="@android:color/white" />
 
 
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
 
 
 </LinearLayout>
