@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brand"
+            android:id="@+id/brands"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/brand"
+            android:entries="@array/brands">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/model"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/model_edit"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the Model"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/motor"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/motors"
+            android:entries="@array/motors"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/antiguity"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="110dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/years"
+            android:entries="@array/years"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/km"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/kilometers_edit"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Introduce Kilometers"
+            android:layout_marginTop="20dp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/cancel"
+            android:drawableLeft="@mipmap/ic_cancel_black_24dp"
+            android:drawablePadding="8dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2aa8da"
+            android:text="@string/cancel"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="140dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/save"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:drawableLeft="@mipmap/ic_save_black_24dp"
+            android:drawablePadding="8dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2aa8da"
+            android:text="@string/save"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

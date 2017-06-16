@@ -1,6 +1,11 @@
 package domain.crack.sergigrau.myauto3.Location_Package;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,13 +46,29 @@ public class Location_Fragment extends Fragment implements OnMapReadyCallback {
 
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.location_fragment,container,false);
 
-        mapView = (MapView) v.findViewById(R.id.map);
-        mapView.onCreate(savedInstanceState);
-        mapView.onResume();
-        mapView.getMapAsync(this);
+        View v;
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean network = SP.getBoolean("network",true);
 
+        if(network){
+            if(checkNetwork()){
+                v = inflater.inflate(R.layout.location_fragment,container,false);
+                mapView = (MapView) v.findViewById(R.id.map);
+                mapView.onCreate(savedInstanceState);
+                mapView.onResume();
+                mapView.getMapAsync(this);
+            }else{
+                v = inflater.inflate(R.layout.no_network, container,false);
+
+            }
+        }else{
+            v = inflater.inflate(R.layout.location_fragment,container,false);
+            mapView = (MapView) v.findViewById(R.id.map);
+            mapView.onCreate(savedInstanceState);
+            mapView.onResume();
+            mapView.getMapAsync(this);
+        }
 
         return v;
     }
@@ -55,23 +76,36 @@ public class Location_Fragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(final GoogleMap googleMap) {
 
-        FirebaseDatabase db =  FirebaseDatabase.getInstance();
-        final DatabaseReference ref_latitud =  db.getReference("Latitud");
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean network = SP.getBoolean("network",true);
 
-        final DatabaseReference ref_longitud =  db.getReference("Longitud");
+        if(network) {
+            if (checkNetwork()) {
+                FirebaseDatabase db =  FirebaseDatabase.getInstance();
+                final DatabaseReference ref_latitud =  db.getReference("Latitud");
+
+                final DatabaseReference ref_longitud =  db.getReference("Longitud");
 
 
-        ref_latitud.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Latitud = dataSnapshot.getValue(Double.class);
-
-                ref_longitud.addValueEventListener(new ValueEventListener() {
+                ref_latitud.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        Longitud = dataSnapshot.getValue(Double.class);
-                        googleMap.addMarker(new MarkerOptions().position(new LatLng(Latitud, Longitud)).title("Your Car is Here"));
+                        Latitud = dataSnapshot.getValue(Double.class);
 
+                        ref_longitud.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                Longitud = dataSnapshot.getValue(Double.class);
+                                googleMap.addMarker(new MarkerOptions().position(new LatLng(Latitud, Longitud)).title("Your Car is Here"));
+
+
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError databaseError) {
+
+                            }
+                        });
 
                     }
 
@@ -82,14 +116,58 @@ public class Location_Fragment extends Fragment implements OnMapReadyCallback {
                 });
 
             }
+        }else{
+            FirebaseDatabase db =  FirebaseDatabase.getInstance();
+            final DatabaseReference ref_latitud =  db.getReference("Latitud");
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+            final DatabaseReference ref_longitud =  db.getReference("Longitud");
 
+
+            ref_latitud.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Latitud = dataSnapshot.getValue(Double.class);
+
+                    ref_longitud.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Longitud = dataSnapshot.getValue(Double.class);
+                            googleMap.addMarker(new MarkerOptions().position(new LatLng(Latitud, Longitud)).title("Your Car is Here"));
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+        }
+
+
+    }
+
+    public boolean checkNetwork(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if(networkInfo != null && networkInfo.isConnected()){
+            if(networkInfo.getType() ==  ConnectivityManager.TYPE_WIFI){
+                return true;
+            }else{
+                return false;
             }
-        });
-
-
+        }else{
+            return false;
+        }
     }
 
 

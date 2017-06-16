@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Brand:"
+            android:text="@string/brand"
             android:id="@+id/brands"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Model:"
+            android:text="@string/model"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textSize="20dp"
@@ -65,7 +65,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Motor:"
+            android:text="@string/motor"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textSize="20dp"
@@ -90,7 +90,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Years of antiguaty:"
+            android:text="@string/antiguity"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textSize="20dp"
@@ -114,7 +114,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kilometers:"
+            android:text="@string/km"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:textSize="20dp"
@@ -145,12 +145,12 @@
             android:drawablePadding="8dp"
             android:textColor="@android:color/white"
             android:backgroundTint="#2aa8da"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="30dp"
             />
 
         <Button
@@ -158,12 +158,12 @@
             android:id="@+id/save"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="10dp"
             android:drawableLeft="@mipmap/ic_save_black_24dp"
             android:drawablePadding="8dp"
             android:textColor="@android:color/white"
             android:backgroundTint="#2aa8da"
-            android:text="Save"
+            android:text="@string/save"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             />

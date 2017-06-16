@@ -1,6 +1,11 @@
 package domain.crack.sergigrau.myauto3.Domain_Package;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -37,10 +42,22 @@ public class AddAuto_Fragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.add_auto,container,false);
 
+        View v;
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean network = SP.getBoolean("network",true);
 
-        return view;
+        if(network){
+            if(checkNetwork()){
+                v = inflater.inflate(R.layout.add_auto,container,false);
+            }else{
+                v = inflater.inflate(R.layout.no_network,container,false);
+            }
+        }else{
+            v = inflater.inflate(R.layout.add_auto,container,false);
+        }
+
+        return v;
 
     }
 
@@ -48,105 +65,213 @@ public class AddAuto_Fragment extends Fragment{
     public void onViewCreated(View view,  Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-
     }
 
     @Override
     public void onActivityCreated( Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        cancel = (Button) getView().findViewById(R.id.cancel);
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean network = SP.getBoolean("network",true);
 
-        save = (Button)getView().findViewById(R.id.save);
+        if(network){
+            if(checkNetwork()){
+                cancel = (Button) getView().findViewById(R.id.cancel);
 
-        brands_spinner = (Spinner) getView().findViewById(R.id.brand);
+                save = (Button)getView().findViewById(R.id.save);
 
-        motors_spinner = (Spinner) getView().findViewById(R.id.motors);
+                brands_spinner = (Spinner) getView().findViewById(R.id.brand);
 
-        antiguity_spinner = (Spinner) getView().findViewById(R.id.years);
+                motors_spinner = (Spinner) getView().findViewById(R.id.motors);
 
-        model_edit = (EditText) getView().findViewById(R.id.model_edit);
+                antiguity_spinner = (Spinner) getView().findViewById(R.id.years);
 
-        kilometers_edit = (EditText)getView().findViewById(R.id.kilometers_edit);
+                model_edit = (EditText) getView().findViewById(R.id.model_edit);
 
-        antiguity_spinner.setOnItemSelectedListener(new SpinnerSelected());
+                kilometers_edit = (EditText)getView().findViewById(R.id.kilometers_edit);
 
-        brands_spinner.setOnItemSelectedListener(new SpinnerSelected());
+                antiguity_spinner.setOnItemSelectedListener(new SpinnerSelected());
 
-        motors_spinner.setOnItemSelectedListener(new SpinnerSelected());
+                brands_spinner.setOnItemSelectedListener(new SpinnerSelected());
+
+                motors_spinner.setOnItemSelectedListener(new SpinnerSelected());
 
 
 
-        cancel.setOnClickListener(new View.OnClickListener() {
+                cancel.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.container,new description_fragment()).commit();
+                    @Override
+                    public void onClick(View v) {
+                        FragmentManager fragmentManager = getFragmentManager();
+                        fragmentManager.beginTransaction().replace(R.id.container,new description_fragment()).commit();
 
+                    }
+                });
+
+                save.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+
+                        String model = null;
+                        model =  model_edit.getText().toString();
+
+                        if(model.equals("")){
+
+                            Toast.makeText(getActivity().getBaseContext(),"Please Introduce the model",Toast.LENGTH_SHORT).show();
+
+                        }else{
+
+
+                            TextView textView_header = (TextView) getActivity().findViewById(R.id.textView);
+                            ImageView imageView_header = (ImageView)getActivity().findViewById(R.id.imageView);
+                            kilometers_edit = (EditText)getView().findViewById(R.id.kilometers_edit);
+
+
+                            imageView_header.setImageResource(R.mipmap.car);
+
+                            String brand = brands_spinner.getSelectedItem().toString();
+                            String motor = motors_spinner.getSelectedItem().toString();
+                            String antiguity = antiguity_spinner.getSelectedItem().toString();
+                            String kilometers = kilometers_edit.getText().toString();
+                            textView_header.setText(brand + " " + model + " " + motor );
+
+                            FirebaseDatabase db = FirebaseDatabase.getInstance();
+                            DatabaseReference ref_cocheid = db.getReference("Coche_id");
+                            DatabaseReference ref_brand = db.getReference("Brand");
+                            DatabaseReference ref_model = db.getReference("Model");
+                            DatabaseReference ref_motor = db.getReference("Motor");
+                            DatabaseReference ref_antiguity = db.getReference("Antiguity");
+                            DatabaseReference ref_kilometers = db.getReference("Kilometers");
+                            DatabaseReference ref_olicontador = db.getReference("Oli Contador");
+
+                            ref_cocheid.setValue("coche");
+                            ref_brand.setValue(brand);
+                            ref_model.setValue(model);
+                            ref_motor.setValue(motor);
+                            ref_antiguity.setValue(antiguity);
+                            ref_kilometers.setValue(kilometers);
+
+                            manteniment = (Integer.parseInt(kilometers)*1000)%15000000;
+
+                            ref_olicontador.setValue(manteniment);
+
+                            FragmentManager fragmentManager = getFragmentManager();
+                            fragmentManager.beginTransaction().replace(R.id.container,new description_fragment()).commit();
+
+                        }
+
+
+
+                    }
+                });
             }
-        });
+        }else{
+            cancel = (Button) getView().findViewById(R.id.cancel);
 
-        save.setOnClickListener(new View.OnClickListener() {
+            save = (Button)getView().findViewById(R.id.save);
 
-            @Override
-            public void onClick(View v) {
+            brands_spinner = (Spinner) getView().findViewById(R.id.brand);
 
-                String model = null;
-                model =  model_edit.getText().toString();
+            motors_spinner = (Spinner) getView().findViewById(R.id.motors);
 
-                if(model.equals("")){
+            antiguity_spinner = (Spinner) getView().findViewById(R.id.years);
 
-                    Toast.makeText(getActivity().getBaseContext(),"Please Introduce the model",Toast.LENGTH_SHORT).show();
+            model_edit = (EditText) getView().findViewById(R.id.model_edit);
 
-                }else{
+            kilometers_edit = (EditText)getView().findViewById(R.id.kilometers_edit);
+
+            antiguity_spinner.setOnItemSelectedListener(new SpinnerSelected());
+
+            brands_spinner.setOnItemSelectedListener(new SpinnerSelected());
+
+            motors_spinner.setOnItemSelectedListener(new SpinnerSelected());
 
 
-                    TextView textView_header = (TextView) getActivity().findViewById(R.id.textView);
-                    ImageView imageView_header = (ImageView)getActivity().findViewById(R.id.imageView);
-                    kilometers_edit = (EditText)getView().findViewById(R.id.kilometers_edit);
 
+            cancel.setOnClickListener(new View.OnClickListener() {
 
-                    imageView_header.setImageResource(R.mipmap.car);
-
-                    String brand = brands_spinner.getSelectedItem().toString();
-                    String motor = motors_spinner.getSelectedItem().toString();
-                    String antiguity = antiguity_spinner.getSelectedItem().toString();
-                    String kilometers = kilometers_edit.getText().toString();
-                    textView_header.setText(brand + " " + model + " " + motor );
-
-                    FirebaseDatabase db = FirebaseDatabase.getInstance();
-                    DatabaseReference ref_cocheid = db.getReference("Coche_id");
-                    DatabaseReference ref_brand = db.getReference("Brand");
-                    DatabaseReference ref_model = db.getReference("Model");
-                    DatabaseReference ref_motor = db.getReference("Motor");
-                    DatabaseReference ref_antiguity = db.getReference("Antiguity");
-                    DatabaseReference ref_kilometers = db.getReference("Kilometers");
-                    DatabaseReference ref_olicontador = db.getReference("Oli Contador");
-
-                    ref_cocheid.setValue("coche");
-                    ref_brand.setValue(brand);
-                    ref_model.setValue(model);
-                    ref_motor.setValue(motor);
-                    ref_antiguity.setValue(antiguity);
-                    ref_kilometers.setValue(kilometers);
-
-                    manteniment = (Integer.parseInt(kilometers)*1000)%15000000;
-
-                    ref_olicontador.setValue(manteniment);
-
+                @Override
+                public void onClick(View v) {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction().replace(R.id.container,new description_fragment()).commit();
 
                 }
+            });
+
+            save.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+                    String model = null;
+                    model =  model_edit.getText().toString();
+
+                    if(model.equals("")){
+
+                        Toast.makeText(getActivity().getBaseContext(),"Please Introduce the model",Toast.LENGTH_SHORT).show();
+
+                    }else{
+
+
+                        TextView textView_header = (TextView) getActivity().findViewById(R.id.textView);
+                        ImageView imageView_header = (ImageView)getActivity().findViewById(R.id.imageView);
+                        kilometers_edit = (EditText)getView().findViewById(R.id.kilometers_edit);
+
+
+                        imageView_header.setImageResource(R.mipmap.car);
+
+                        String brand = brands_spinner.getSelectedItem().toString();
+                        String motor = motors_spinner.getSelectedItem().toString();
+                        String antiguity = antiguity_spinner.getSelectedItem().toString();
+                        String kilometers = kilometers_edit.getText().toString();
+                        textView_header.setText(brand + " " + model + " " + motor );
+
+                        FirebaseDatabase db = FirebaseDatabase.getInstance();
+                        DatabaseReference ref_cocheid = db.getReference("Coche_id");
+                        DatabaseReference ref_brand = db.getReference("Brand");
+                        DatabaseReference ref_model = db.getReference("Model");
+                        DatabaseReference ref_motor = db.getReference("Motor");
+                        DatabaseReference ref_antiguity = db.getReference("Antiguity");
+                        DatabaseReference ref_kilometers = db.getReference("Kilometers");
+                        DatabaseReference ref_olicontador = db.getReference("Oli Contador");
+
+                        ref_cocheid.setValue("coche");
+                        ref_brand.setValue(brand);
+                        ref_model.setValue(model);
+                        ref_motor.setValue(motor);
+                        ref_antiguity.setValue(antiguity);
+                        ref_kilometers.setValue(kilometers);
+
+                        manteniment = (Integer.parseInt(kilometers)*1000)%15000000;
+
+                        ref_olicontador.setValue(manteniment);
+
+                        FragmentManager fragmentManager = getFragmentManager();
+                        fragmentManager.beginTransaction().replace(R.id.container,new description_fragment()).commit();
+
+                    }
 
 
 
+                }
+            });
+        }
+
+    }
+
+    public boolean checkNetwork(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if(networkInfo != null && networkInfo.isConnected()){
+            if(networkInfo.getType() ==  ConnectivityManager.TYPE_WIFI){
+                return true;
+            }else{
+                return false;
             }
-        });
-
-
+        }else{
+            return false;
+        }
     }
 
 

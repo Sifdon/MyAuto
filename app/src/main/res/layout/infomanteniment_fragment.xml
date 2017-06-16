@@ -6,6 +6,34 @@
     android:background="@drawable/fondo_2"
     android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:id="@+id/k"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint=" KM'S"/>
+                <Button
+                    android:id="@+id/kmsave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#2aa8da"
+                    android:drawableLeft="@mipmap/ic_save_black_24dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white"
+                    android:textSize="15px" />
+        </LinearLayout>
         <TextView
             android:id="@+id/km"
             android:layout_width="wrap_content"
@@ -46,7 +74,7 @@
                     android:backgroundTint="#2aa8da"
                     android:drawableLeft="@mipmap/engine_outline"
                     android:drawablePadding="8dp"
-                    android:text="Initialize Manteniment"
+                    android:text="@string/mant1"
                     android:textColor="@android:color/white"
                     android:textSize="15px" />
 
@@ -76,12 +104,26 @@
                     android:backgroundTint="#2aa8da"
                     android:drawableLeft="@mipmap/check_circle_outline"
                     android:drawablePadding="8dp"
-                    android:text="Manteniment Realized"
+                    android:text="@string/mant2"
                     android:textColor="@android:color/white"
                     android:textSize="15px" />
 
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#2aa8da"
+            android:drawableLeft="@mipmap/delete_forever"
+            android:drawablePadding="8dp"
+            android:text="@string/car_remove"
+            android:textColor="@android:color/white"
+            android:textSize="15px" />
 
 
 </LinearLayout>

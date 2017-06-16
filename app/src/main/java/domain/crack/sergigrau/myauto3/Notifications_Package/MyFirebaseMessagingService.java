@@ -4,8 +4,10 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -32,7 +34,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         if(remoteMessage.getNotification() != null){
             Log.d(TAG, "Message Notification Body: "+ remoteMessage.getNotification().getBody());
         }
-        sendNotifications(remoteMessage.getNotification().getBody(), remoteMessage.getNotification().getTitle());
+
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        boolean notifications = SP.getBoolean("notifications",true);
+        if(notifications){
+            sendNotifications(remoteMessage.getNotification().getBody(), remoteMessage.getNotification().getTitle());
+        }
     }
     public void sendNotifications (String messageBody, String tittle){
         Intent intent = new Intent(this, Home.class);

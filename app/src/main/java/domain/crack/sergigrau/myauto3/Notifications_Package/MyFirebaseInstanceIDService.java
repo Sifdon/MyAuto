@@ -24,7 +24,6 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     }
 
     private void sendRegistrationToServer(String token){
-
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference ref = db.getReference("tokendevices");
         ref.push().setValue(token);

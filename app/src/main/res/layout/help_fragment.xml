@@ -13,6 +13,16 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hc"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="40px" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,31 +31,15 @@
             android:layout_marginLeft="2dp"
             android:textSize="15dp"
             android:textColor="@color/colorPrimaryDark"
-            android:text="With this application you have the possibility to know at all times where you have parked the vehicle. A part provides the functionality to control the relevant maintenance of the vehicle, which is why you are asked to enter the data correctly. In case you want to modify the data or change the entered vehicle can be managed through the side menu in the option of Modify Preferences."/>
+            android:text="@string/help1"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textColor="@color/colorPrimaryDark"
-            android:text="In case of any doubt you can contact us by email: sergiandmarc@domain.crack.org" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:id="@+id/back_help"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="right"
-            android:drawableLeft="@mipmap/ic_backspace_black_24dp"
-            android:drawablePadding="8dp"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#2aa8da"
-            android:text="Back"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            />
+            android:text="@string/help2" />
 
     </LinearLayout>
-
 
 
 </LinearLayout>

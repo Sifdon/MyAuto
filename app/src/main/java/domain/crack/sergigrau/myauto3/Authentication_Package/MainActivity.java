@@ -91,6 +91,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
@@ -142,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),"LOGIN CORRECTO",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), Home.class);
                             startActivity(intent);
+                            finish();
                         }
                     }
                 });

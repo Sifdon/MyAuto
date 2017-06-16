@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_fondo">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="LogIn:"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/user_login"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the User"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/pass_login"
+            android:inputType="numberPassword"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the Password"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/account_key"
+            android:drawablePadding="8dp"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="18px"
+            android:backgroundTint="#2aa8da" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/log1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/user_register"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the User"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/pass_register"
+            android:inputType="numberPassword"
+            android:layout_height="wrap_content"
+            android:hint="Introduce the Password"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/account_multiple_plus"
+            android:drawablePadding="8dp"
+            android:text="@string/log2"
+            android:textColor="@android:color/white"
+            android:textSize="18px"
+            android:backgroundTint="#2aa8da" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

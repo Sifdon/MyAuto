@@ -33,37 +33,26 @@ public class Location_Receiver extends BroadcastReceiver {
         final DatabaseReference ref_moviment = db.getReference("Moviment");
         final DatabaseReference ref_olicontador = db.getReference("Oli Contador");
 
-
         if(LocationResult.hasResult(intent)){
-
-
-
             LocationResult locationResult = LocationResult.extractResult(intent);
             final Location location = locationResult.getLastLocation();
-
 
             ref_moviment.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if(dataSnapshot.getValue(String.class).equals("vehicle")){
                         ref_latitud.setValue(location.getLatitude());
-
                         ref_longitud.setValue(location.getLongitude());
-
                     }
                 }
-
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-
                 }
             });
-
             ref_latitud.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Latitud_anterior = dataSnapshot.getValue(Double.class);
-
                     ref_longitud.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -82,37 +71,27 @@ public class Location_Receiver extends BroadcastReceiver {
                                                 tmp = tmp + distance;
                                                 ref_olicontador.setValue(tmp);
                                             }
-
                                             @Override
                                             public void onCancelled(DatabaseError databaseError) {
-
                                             }
                                         });
                                     }
                                 }
-
                                 @Override
                                 public void onCancelled(DatabaseError databaseError) {
-
                                 }
                             });
                         }
-
                         @Override
                         public void onCancelled(DatabaseError databaseError) {
-
                         }
                     });
                 }
-
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-
                 }
             });
-
         }
-
     }
 
 

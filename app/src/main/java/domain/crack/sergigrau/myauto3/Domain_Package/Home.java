@@ -7,7 +7,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -85,14 +89,16 @@ public class Home extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(R.id.container,new description_fragment()).commit();
+
+        if(savedInstanceState == null){
+            fragmentManager.beginTransaction().add(R.id.container,new description_fragment(),"fragment").commit();
 
 
-
-
+        }else{
+            Fragment fragment = getSupportFragmentManager().getFragment(savedInstanceState,"fragment");
+            fragmentManager.beginTransaction().replace(R.id.container,fragment,"fragment").commit();
+        }
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -105,95 +111,107 @@ public class Home extends AppCompatActivity
                 final FragmentManager fragmentManager = getSupportFragmentManager();
 
                 FirebaseDatabase db = FirebaseDatabase.getInstance();
-
-
                 DatabaseReference ref_coche = db.getReference("Coche_id");
 
-
-
                 if (id == R.id.addauto) {
-
-
-
                     TextView t = (TextView) navigationView.getHeaderView(0).findViewById(R.id.textView);
-
                     ref_coche.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             if(dataSnapshot.getValue(String.class).equals("")){
-                                fragmentManager.beginTransaction().replace(R.id.container,new AddAuto_Fragment()).commit();
+                                fragmentManager.beginTransaction().replace(R.id.container,new AddAuto_Fragment(),"fragment").commit();
 
                             }else{
                                 Toast.makeText(getApplication(),"There is already an added vehicle", Toast.LENGTH_SHORT).show();
-
                             }
-
                         }
-
                         @Override
                         public void onCancelled(DatabaseError databaseError) {
-
                         }
                     });
-
                 } else if (id == R.id.preferences) {
                     startActivity(new Intent(getApplication(), Preferences.class));
                 } else if(id == R.id.help){
-                    fragmentManager.beginTransaction().replace(R.id.container, new Help_Fragment()).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container, new Help_Fragment(),"fragment").commit();
                 } else if (id == R.id.location){
-                    fragmentManager.beginTransaction().replace(R.id.container, new Location_Fragment()).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container, new Location_Fragment(),"fragment").commit();
                 } else if(id == R.id.info_manteniment){
-                    fragmentManager.beginTransaction().replace(R.id.container, new InfoManteniment_Fragment()).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container, new InfoManteniment_Fragment(),"fragment").commit();
                 }else if(id ==  R.id.logout){
                     FirebaseAuth.getInstance().signOut();
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }else if(id == R.id.log){
-                    fragmentManager.beginTransaction().replace(R.id.container, new History_Fragment()).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container, new History_Fragment(),"fragment").commit();
                 }
-
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
-
-        // First we need to check availability of play services
-        if (checkPlayServices()) {
-
-            // Building the GoogleApi client
-            buildGoogleApiClient();
-
-            createLocationRequest();
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean network = SP.getBoolean("network",true);
+        if(network){
+            if(checkNetwork()){
+                // First we need to check availability of play services
+                if (checkPlayServices()) {
+                    // Building the GoogleApi client
+                    buildGoogleApiClient();
+                    createLocationRequest();
+                }
+            }
+        }else{
+            // First we need to check availability of play services
+            if (checkPlayServices()) {
+                // Building the GoogleApi client
+                buildGoogleApiClient();
+                createLocationRequest();
+            }
         }
 
     }
 
-
     @Override
     protected void onStart() {
-        mGoogleApiClient.connect();
-        mGoogleApiClientMonitor.connect();
-        super.onStart();
 
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean network = SP.getBoolean("network",true);
+        if(network){
+            if(checkNetwork()){
+                mGoogleApiClient.connect();
+                mGoogleApiClientMonitor.connect();
+            }
+        }else{
+                mGoogleApiClient.connect();
+                mGoogleApiClientMonitor.connect();
+
+        }
+        super.onStart();
     }
 
     @Override
     protected void onStop() {
-        mGoogleApiClient.disconnect();
-        mGoogleApiClientMonitor.disconnect();
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean network = SP.getBoolean("network",true);
+        if(network){
+            if(checkNetwork()){
+                mGoogleApiClient.disconnect();
+                mGoogleApiClientMonitor.disconnect();
+            }
+        }else{
+                mGoogleApiClient.disconnect();
+                mGoogleApiClientMonitor.disconnect();
+
+        }
         super.onStop();
     }
-
-
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
         }
     }
 
@@ -214,9 +232,6 @@ public class Home extends AppCompatActivity
                     .addOnConnectionFailedListener(this)
                     .addApi(ActivityRecognition.API).build();
         }
-
-
-
     }
 
     /**
@@ -228,15 +243,12 @@ public class Home extends AppCompatActivity
         mLocationRequest.setFastestInterval(FATEST_INTERVAL);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         mLocationRequest.setSmallestDisplacement(DISPLACEMENT);
-
-
     }
 
     /**
      * Method to verify google play services on the device
      * */
     private boolean checkPlayServices() {
-
         GoogleApiAvailability googleAPI = GoogleApiAvailability.getInstance();
         int result = googleAPI.isGooglePlayServicesAvailable(this);
         if(result != ConnectionResult.SUCCESS) {
@@ -260,12 +272,10 @@ public class Home extends AppCompatActivity
         Log.i(TAG, "Connection failed: ConnectionResult.getErrorCode() = "
                 + result.getErrorCode());
         Toast.makeText(this, "GoogleApiClient FAILED",Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
     public void onConnected(Bundle arg0) {
-
         // Once connected with google api, get the location
         locationIntent = new Intent(getApplicationContext(), Location_Receiver.class);
         Intent intent = new Intent(this, ActivityRecognizedService.class);
@@ -291,108 +301,25 @@ public class Home extends AppCompatActivity
             if(mGoogleApiClientMonitor.isConnected()){
                 ActivityRecognition.ActivityRecognitionApi.requestActivityUpdates(mGoogleApiClientMonitor, 3000, pendingIntent);
             }
-
-
-
-
     }
 
     @Override
     public void onConnectionSuspended(int arg0) {
         mGoogleApiClient.connect();
         mGoogleApiClientMonitor.connect();
-
     }
 
     @Override
     public void onLocationChanged(Location location) {
         // Assign the new location
         mLastLocation = location;
-
-
-
     }
+
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
-
-        final DatabaseReference ref_brand = db.getReference("Brand");
-        final DatabaseReference ref_model = db.getReference("Model");
-        final DatabaseReference ref_motor = db.getReference("Motor");
-
-        DatabaseReference ref_cocheid = db.getReference("Coche_id");
-
-        SharedPreferences preferencias = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        final ImageView imageView_header = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.imageView);
-        final TextView textView_header = (TextView) navigationView.getHeaderView(0).findViewById(R.id.textView);
-        TextView welcome = (TextView)navigationView.getHeaderView(0).findViewById(R.id.welcome);
-        welcome.setText("Welcome " + preferencias.getString("name",""));
-
-
-            ref_cocheid.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    if(dataSnapshot.getValue(String.class).equals("coche")){
-                        ref_brand.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                final String brand = dataSnapshot.getValue(String.class);
-
-                                ref_model.addValueEventListener(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(DataSnapshot dataSnapshot) {
-                                        final String model = dataSnapshot.getValue(String.class);
-
-                                        ref_motor.addValueEventListener(new ValueEventListener() {
-                                            @Override
-                                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                                String motor = dataSnapshot.getValue(String.class);
-                                                String result = brand + " " + model + " " + motor;
-                                                textView_header.setText(result);
-                                                imageView_header.setImageResource(R.drawable.coche);
-
-
-                                            }
-
-                                            @Override
-                                            public void onCancelled(DatabaseError databaseError) {
-
-                                            }
-                                        });
-                                    }
-
-                                    @Override
-                                    public void onCancelled(DatabaseError databaseError) {
-
-                                    }
-                                });
-                            }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
-                    }else{
-                        imageView_header.setImageResource(R.drawable.empty);
-                        textView_header.setText("Not Car Introduced");
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(R.id.container_tittle,new Tittle_Fragment()).commit();
-
+        createNavigationDrawer();
     }
 
    @SuppressWarnings("StatementWithEmptyBody")
@@ -401,7 +328,91 @@ public class Home extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Fragment f = getSupportFragmentManager().findFragmentByTag("fragment");
+        getSupportFragmentManager().putFragment(outState,"fragment",f);
+    }
 
 
+    public boolean checkNetwork(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if(networkInfo != null && networkInfo.isConnected()){
+            if(networkInfo.getType() ==  ConnectivityManager.TYPE_WIFI){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
 
+    public void createNavigationDrawer(){
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+
+        final DatabaseReference ref_brand = db.getReference("Brand");
+        final DatabaseReference ref_model = db.getReference("Model");
+        final DatabaseReference ref_motor = db.getReference("Motor");
+
+        DatabaseReference ref_cocheid = db.getReference("Coche_id");
+
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(this);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        final ImageView imageView_header = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.imageView);
+        final TextView textView_header = (TextView) navigationView.getHeaderView(0).findViewById(R.id.textView);
+        TextView welcome = (TextView)navigationView.getHeaderView(0).findViewById(R.id.welcome);
+        welcome.setText("Welcome " + SP.getString("name",""));
+
+        ref_cocheid.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.getValue(String.class).equals("coche")){
+                    ref_brand.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            final String brand = dataSnapshot.getValue(String.class);
+
+                            ref_model.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    final String model = dataSnapshot.getValue(String.class);
+
+                                    ref_motor.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(DataSnapshot dataSnapshot) {
+                                            String motor = dataSnapshot.getValue(String.class);
+                                            String result = brand + " " + model + " " + motor;
+                                            textView_header.setText(result);
+                                            imageView_header.setImageResource(R.drawable.coche);
+                                        }
+                                        @Override
+                                        public void onCancelled(DatabaseError databaseError) {
+                                        }
+                                    });
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+                                }
+                            });
+                        }
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+                }else{
+                    imageView_header.setImageResource(R.drawable.empty);
+                    textView_header.setText("Not Car Introduced");
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
 }

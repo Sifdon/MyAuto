@@ -4,34 +4,6 @@ const functions = require('firebase-functions');
 
 const admin = require('firebase-admin');
 
-/*var Sequelize = require('sequelize');
-
-var sequelize = new Sequelize(undefined, undefined, undefined, {
-    'dialect': 'sqlite',
-    'storage': __dirname + '/myauto.sqlite'
-});
-
-var Data = sequelize.define('data', {
-    m: {
-        type: Sequelize.INTEGER
-    },
-    d: {
-        type: Sequelize.INTEGER
-    },
-    y: {
-        type: Sequelize.INTEGER
-    }
-})
-
-var Taller = sequelize.define('taller', {
-    t: {
-        type: Sequelize.STRING
-    }
-})
-
-*/
-
-
 admin.initializeApp(functions.config().firebase);
 
 exports.StadisticLog = functions.database.ref('/Proces').onWrite(event => {
@@ -150,6 +122,7 @@ exports.StadisticLog = functions.database.ref('/Proces').onWrite(event => {
 
 // Sends a notifications to all users when a new message is posted.
 
+
 exports.sendNotifications = functions.database.ref('/Oli Contador').onWrite(event => {
   const snapshot = event.data;
   // Notification details.
@@ -163,17 +136,35 @@ exports.sendNotifications = functions.database.ref('/Oli Contador').onWrite(even
                  title: 'You have to change the Oil' ,
                  body: "Don't forget !!"
                }
-             };
-              return admin.messaging().sendToDevice("f72lANbg2sU:APA91bHKrD-qYbVWHtUcDpnO2w1JYnTxTvhl5DP79t8pZsfQFrQm1V4nZyegch70-3NyjJIL58ThhrH6MXvl6sfRrD7CIips6PRE5UW4ShT_iOCYWzg7GeNZc3TExY6CCBqd1ihTEIWk", payload).then(response => {
-                   });
+   };
+   const DeviceTokensPromise = admin.database().ref('tokendevices').once('value');
+   return Promise.all([DeviceTokensPromise]).then(results =>{
+        const tokenSnapshot = results[0];
+        if(!tokenSnapshot.hasChildren()){
+            return console.log('There are no notification tokens to send to.');
+        }
+        const tokens = Object.keys(tokenSnapshot.val());
+        const t = tokenSnapshot.ref.child(tokens[0]).once('value');
+        return Promise.all([t]).then(res => {
+            const to = res[0];
+            const tok = to.val();
+            console.log(tok);
+            return admin.messaging().sendToDevice(tok, payload).then(response => {
+               const tokensToRemove = [];
+               response.results.forEach((result,index) => {
+                    const error = result.error;
+                    if(error){
+                       console.error('Failure sending notification to', tokens[index], error);
+                       if(error.code === 'messaging/invalid-registration-token' || error.code === 'messaging/registration-token-not-registered'){
+                          tokensToRemove.push(tokenSnapshot.ref.child(tokens[index]).remove());
+                       }
+                    }
+               });
+               Promise.all(tokensToRemove);
+            });
+
+        });
+   });
+
  }
 });
-// // Start writing Firebase Functions
-// // https://firebase.google.com/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-//
-
-
-

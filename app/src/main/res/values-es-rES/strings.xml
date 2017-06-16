@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyAuto3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="brands">
+        <item>Audi </item>
+        <item>Seat </item>
+        <item>Mercedes </item>
+        <item>Opel </item>
+        <item>Renault </item>
+        <item>ALFA ROMEO </item>
+        <item>ASTON MARTIN </item>
+        <item>BMW </item>
+        <item>CITROEN </item>
+        <item>CHEVROLET </item>
+        <item>DACIA </item>
+        <item>FIAT </item>
+        <item>FORD </item>
+        <item>HONDA </item>
+        <item>HYUNDAI </item>
+        <item>JEEP </item>
+        <item>KIA </item>
+        <item>LAND ROVER </item>
+        <item>MAZDA </item>
+        <item>NISSAN </item>
+        <item>PEUGEOT </item>
+        <item>TOYOTA </item>
+        <item>VOLVO </item>
+    </string-array>
+
+    <string-array name="motors">
+        <item>1.0 </item>
+        <item>1.2 </item>
+        <item>1.4 </item>
+        <item>1.6 </item>
+        <item>1.9 </item>
+        <item>2.0 </item>
+        <item>2.2 </item>
+    </string-array>
+
+    <string-array name="years">
+        <item>1 </item>
+        <item>2 </item>
+        <item>3 </item>
+        <item>4 </item>
+        <item>5 </item>
+        <item>6 </item>
+        <item>7 </item>
+        <item>8 </item>
+        <item>9 </item>
+        <item>10 </item>
+        <item>11</item>
+        <item>12 </item>
+        <item>13 </item>
+        <item>14 </item>
+        <item>15 </item>
+        <item>16 </item>
+        <item>17 </item>
+        <item>18 </item>
+        <item>19 </item>
+        <item>20 </item>
+
+    </string-array>
+
+    <string name="brand">Marca:</string>
+    <string name="model">Modelo:</string>
+    <string name="motor">Motor:</string>
+    <string name="antiguity">Años de Antigüedad:</string>
+    <string name="km">Kilómetros:</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="descr1">Interactua con el menu del lado izquierdo para obtener la localización de tu vehículo o toda la información de los mantenimientos respectivos.
+    En este menu puedes actualizar las preferencias del vehículo, eliminarlo y añadir otro de nuevo.</string>
+    <string name="descr2">SOLAMENTE PUEDES AÑADIR UN VEHÍCULO A LA VEZ!!</string>
+    <string name="help1"> Con esta aplicación tienes la posibilidad de saber en todo momento donde tienes el vehículo aparcado. A parte también proporciona la funcionalidad para controlar todos sus mantenimentos y mediante las preferencias gestionarlos.</string>
+    <string name="help2">En caso de tener cualquier duda contactenos vía email: sergiandmarc@domain.crack.org</string>
+    <string name="mant1">Inicializar Mantenimiento</string>
+    <string name="mant2">Mantenimiento Realizado</string>
+    <string name="log1">Si todavía no tiene cuenta , registrate aquí:</string>
+    <string name="log2">Registrar</string>
+    <string name="tittle">Cuida la salud de tu vehículo</string>
+    <string name="no_network">No hay red wifi activa!</string>
+    <string name="notifications">Recibir Notificaciones</string>
+    <string name="user">Preferencias Cuenta Usuario</string>
+    <string name="nameuser">Tu Nombre</string>
+    <string name="red">Preferencias de Red</string>
+    <string name="wifi">Funcionalidades con WIFI</string>
+    <string name="car_remove">Eliminar Auto</string>
+    <string name="history">Historial de los Mantenimientos:</string>
+    <string name="hc">Ayuda y Contacto</string>
+
+
+
+
+
+
+
+
+
+</resources>

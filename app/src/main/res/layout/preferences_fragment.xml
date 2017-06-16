@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/fondo_2">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -35,59 +34,34 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
+        android:orientation="horizontal"
         android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/cancel"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/ic_cancel_black_24dp"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/save"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/ic_save_black_24dp" />
 
         <Button
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
             android:id="@+id/remove"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="25dp"
-            android:drawableLeft="@mipmap/delete_forever"
-            android:drawablePadding="8dp"
-            android:textSize="20px"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#2aa8da"
-            android:text="Delete Auto"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:id="@+id/save"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="25dp"
-            android:drawableLeft="@mipmap/ic_save_black_24dp"
-            android:drawablePadding="8dp"
-            android:textColor="@android:color/white"
-            android:textSize="20px"
-            android:backgroundTint="#2aa8da"
-            android:text="Save"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:id="@+id/cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#2aa8da"
-            android:drawableLeft="@mipmap/ic_cancel_black_24dp"
-            android:drawablePadding="8dp"
-            android:text="Cancel"
-            android:textColor="@android:color/white"
-            android:textSize="20px" />
-
-
-
-
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Remove Auto" />
 
 
     </LinearLayout>

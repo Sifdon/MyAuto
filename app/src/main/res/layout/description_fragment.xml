@@ -12,8 +12,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textColor="@color/colorPrimaryDark"
-        android:text="Interacts with the left side menu to obtain the location of your car or all the information on their respective maintenance.
-In this menu you can also update the preferences of the vehicle, like removing it and adding another one again."/>
+        android:text="@string/descr1"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,6 +24,6 @@ In this menu you can also update the preferences of the vehicle, like removing i
         android:id="@+id/descripcio"
         android:textSize="25dp"
         android:textColor="@color/colorAccent"
-        android:text=" YOU CAN ADD ONLY ONE CAR IN THE APP !!"/>
+        android:text="@string/descr2"/>
 
 </LinearLayout>

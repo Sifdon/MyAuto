@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take care of the life of your car"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="275dp"
+        android:layout_height="77dp"
+        android:src="@mipmap/autos"
+        android:id="@+id/imageView2"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

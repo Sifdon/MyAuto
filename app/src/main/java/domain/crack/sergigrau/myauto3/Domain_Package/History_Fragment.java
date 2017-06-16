@@ -1,6 +1,11 @@
 package domain.crack.sergigrau.myauto3.Domain_Package;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,22 +31,49 @@ public class History_Fragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v =  inflater.inflate(R.layout.history_fragment,container,false);
-        final TextView t1 = (TextView) v.findViewById(R.id.info_historial);
-        final FirebaseDatabase db = FirebaseDatabase.getInstance();
-        final DatabaseReference ref_history = db.getReference("Log/History/message");
-        ref_history.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-               t1.setText(dataSnapshot.getValue(String.class));
+        View v;
+        SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        boolean network = SP.getBoolean("network",true);
 
+        if(network){
+            if(checkNetwork()){
+                v =  inflater.inflate(R.layout.history_fragment,container,false);
+                final TextView t1 = (TextView) v.findViewById(R.id.info_historial);
+                final FirebaseDatabase db = FirebaseDatabase.getInstance();
+                final DatabaseReference ref_history = db.getReference("Log/History/message");
+                ref_history.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        t1.setText(dataSnapshot.getValue(String.class));
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+            }else{
+                v = inflater.inflate(R.layout.no_network,container,false);
             }
+        }else{
+            v =  inflater.inflate(R.layout.history_fragment,container,false);
+            final TextView t1 = (TextView) v.findViewById(R.id.info_historial);
+            final FirebaseDatabase db = FirebaseDatabase.getInstance();
+            final DatabaseReference ref_history = db.getReference("Log/History/message");
+            ref_history.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    t1.setText(dataSnapshot.getValue(String.class));
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                }
 
-            }
-        });
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
 
         return v;
     }
@@ -49,17 +81,19 @@ public class History_Fragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+    }
 
-        Button button = (Button) getActivity().findViewById(R.id.back_history);
-
-        button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.container,new description_fragment()).commit();
-
+    public boolean checkNetwork(){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if(networkInfo != null && networkInfo.isConnected()){
+            if(networkInfo.getType() ==  ConnectivityManager.TYPE_WIFI){
+                return true;
+            }else{
+                return false;
             }
-        });
+        }else{
+            return false;
+        }
     }
 }
